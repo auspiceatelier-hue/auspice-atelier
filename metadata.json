@@ -1,0 +1,8 @@
+{
+  "name": "德善軒 - 現代問米調解師",
+  "description": "現代、平靜、專業的跨越時空心靈對話與療癒服務。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

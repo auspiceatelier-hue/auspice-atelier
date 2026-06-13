@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  /* 金 · 水 — 主色調 (~70%) */
+  --color-brand-bg: #FAF8F5;
+  --color-brand-pearl: #F5F2EC;
+  --color-brand-primary: #1A2B4A;
+  --color-brand-water: #243B5A;
+  --color-brand-text: #1A2B4A;
+  --color-brand-dim: #5A6B82;
+  --color-brand-body: #3D4F66;
+
+  /* 金 — 點綴色 (~20%) */
+  --color-brand-accent: #B8963E;
+  --color-brand-gold: #C9A84C;
+  --color-brand-gold-light: #E2D4A8;
+  --color-brand-gold-muted: rgba(184, 150, 62, 0.15);
+
+  /* 土 — 輔助色 (~10%) */
+  --color-brand-surface: #F3EDE4;
+  --color-brand-surface-alt: #E8E0D4;
+  --color-brand-earth: #8B7D6B;
+  --color-brand-footer: #2C3430;
+  --color-brand-footer-text: #C8C0B4;
+
+  --color-brand-line: rgba(26, 43, 74, 0.1);
+  --color-brand-line-gold: rgba(184, 150, 62, 0.35);
+
+  --font-sans: "Helvetica Neue", Arial, "Noto Sans TC", system-ui, sans-serif;
+  --font-serif: Georgia, "Noto Serif TC", "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-body);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(36, 59, 90, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(184, 150, 62, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, var(--color-brand-pearl) 0%, var(--color-brand-bg) 40%, #FFFFFF 100%);
+  line-height: 1.6;
+}
+
+@layer components {
+  .section {
+    @apply py-8 md:py-10 px-4 md:px-5;
+  }
+
+  .section-inner {
+    @apply max-w-5xl mx-auto;
+  }
+
+  .section-eyebrow {
+    @apply text-[10px] tracking-[0.2em] uppercase text-brand-gold mb-2 block font-medium;
+  }
+
+  .section-heading {
+    @apply text-xl md:text-2xl font-serif text-brand-primary;
+  }
+
+  .section-lead {
+    @apply text-brand-dim text-sm leading-relaxed;
+  }
+
+  .card {
+    @apply bg-brand-surface/80 border border-brand-line backdrop-blur-sm;
+  }
+
+  .card-elevated {
+    @apply bg-white/70 border border-brand-line shadow-sm shadow-brand-primary/5;
+  }
+
+  .divider-gold {
+    @apply h-px bg-gradient-to-r from-transparent via-brand-gold/60 to-transparent;
+  }
+
+  .text-highlight {
+    @apply text-brand-gold;
+  }
+
+  .icon-box {
+    @apply border border-brand-line-gold bg-white text-brand-gold
+      group-hover:bg-brand-primary group-hover:text-brand-gold-light
+      group-hover:border-brand-primary transition-colors duration-300;
+  }
+}
